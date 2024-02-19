@@ -1,0 +1,77 @@
+.op-input-main.op-input-main-ip-online {
+  // .op-input-main-[YOUR STYLE SUFFIX]
+  //  main and very first element
+
+  .op-input-wrapper {
+    // input box with its children
+    @apply border-bg-300 relative gap-3 rounded-lg border-2 bg-transparent;
+
+    .icon {
+      @apply text-bg-200;
+    }
+
+    .op-input-box {
+      // input and label box
+      width: 100%;
+
+      input {
+        // padding: 0.5rem 1rem;
+        padding-inline-start: 0;
+        //   input itself
+        width: 100%;
+
+        &::placeholder {
+          opacity: 0;
+        }
+      }
+
+      label {
+        z-index: -1;
+        //   label itself
+      }
+    }
+  }
+
+  .hint {
+    // hint text
+  }
+
+  .error-message {
+    // error message text
+  }
+}
+
+// dynamic classes
+// ===============
+
+// dont forget to add [YOUR STYLE SUFFIX] to these classes like: .op-input-main-[YOUR STYLE SUFFIX]
+
+.op-input-main.op-input-main-ip-online.has-value {
+  // .has-value class will be added once input has value
+  .op-input-wrapper {
+    @apply border-bg-100;
+  }
+  .icon {
+    @apply text-bg-100;
+  }
+}
+
+.op-input-main.has-value {
+  // .has-value class will be added once input has value
+}
+
+.op-input-main.focus {
+  // .focus class will be added once input is focused
+}
+
+.op-input-main.disabled {
+  // .disabled class will be added once input is disabled
+}
+
+.op-input-main.read-only {
+  // .read-only class will be added once input is read-only
+}
+
+.op-input-main.error {
+  // .error class will be added once input has error
+}

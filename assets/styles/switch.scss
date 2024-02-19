@@ -1,0 +1,53 @@
+.op-switch-main-ip-online-pricing.op-switch-main-ip-online-pricing {
+  //  main and very first element
+  display: flex;
+
+  @apply text-lg;
+
+  .op-switch-box {
+    // switch box and its border
+
+    @apply border-bg-400 bg-bg-700 ;
+
+    .op-switch-thumb {
+      // left: 0.2em !important;
+      transform: translateX(0);
+
+      @apply bg-primary;
+      // switch thumb
+      // @apply border-2 border-neutral-300 bg-black;
+    }
+  }
+
+  // dynamic classes
+  // =================
+  .op-switch-box.is-active {
+    // switch box when it is active
+
+    @apply bg-bg-700 border-bg-400;
+
+    .op-switch-thumb {
+      // transform: translateX(2.4em);
+      // switch thumb when it is active
+      // @apply border-2 border-neutral-300 bg-black;
+    }
+  }
+
+  // also for mouse and click active state you can use regular css selector :active
+
+  .op-switch-box.is-active:active {
+    // switch box when it is active and the state is active as well
+    // @apply bg-primary-500 border-primary-500;
+
+    @apply bg-bg-700 border-bg-400;
+
+    .op-switch-thumb {
+      // transform: translateX(2.4em) scaleX(1.2);
+      // switch thumb when parent is :active
+    }
+  }
+
+  .disable {
+    // switch box and thumb when it is disabled
+  }
+}

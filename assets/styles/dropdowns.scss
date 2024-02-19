@@ -1,0 +1,106 @@
+.op-dropdown-main-ip-online {
+  //  main and very first element
+
+  .op-dropdown-wrapper {
+    // this is the wrapper of the dropdown
+    // overflow: hidden;
+
+    .op-dropdown-button {
+      // this is the button of the dropdown (clickable area button)
+
+      fieldset {
+        // this is the fieldset of the dropdown
+        @apply relative rounded-2xl border-2 border-white/50 bg-transparent px-4;
+
+        &.has-legend {
+          // this is the fieldset of the dropdown if it does have legend prop
+        }
+
+        legend {
+          // this is the legend of the dropdown if it does have legend prop
+        }
+
+        .fieldset-content {
+          // this is the content of the fieldset
+
+          .fieldset-selected-options-wrapper {
+            // this is the wrapper of the selected options of the fieldset
+
+            .fieldset-selected-option {
+              // this is the selected option of the fieldset
+
+              .fieldset-selected-option-content-wrapper {
+                // this is the wrapper of the content of the selected option of the fieldset
+
+                .icon {
+                  // this is the icon of the selected option of the fieldset if has
+                }
+
+                img {
+                  // this is the img of the selected option of the fieldset if has
+                  @apply h-4 w-4;
+                }
+              }
+            }
+          }
+        }
+
+        .fieldset-selected-option-as-title {
+          // this is the selected option of the fieldset if it is title
+
+          .fieldset-selected-option-as-title-content {
+            // this is the content of the selected option of the fieldset if it is title
+          }
+        }
+
+        .arrow {
+          // this is the arrow of the dropdown
+
+          &.is-open {
+            // this is the arrow of the dropdown if it is open
+          }
+        }
+      }
+    }
+
+    .op-dropdown-menu {
+      // this is the menu of the dropdown
+
+      &.default-bg {
+        @apply bg-bg-600/80  rounded-2xl border-2  border-white/50 py-4 backdrop-blur-sm;
+
+        // this is the menu of the dropdown if it is default bg
+      }
+
+      .op-dropdown-menu-ul {
+        z-index: 10;
+        // this is the ul of the dropdown-menu
+        .op-dropdown-menu-li {
+          // this is the li of the dropdown-menu
+          //   button {
+          //     // this is the button of the dropdown-menu
+          //     .icon {
+          //       // this is the icon of the dropdown-menu if has
+          //     }
+          img {
+            // this is the img of the dropdown-menu if has
+            @apply h-4 w-4;
+          }
+
+          //     p {
+          //       // this is the text of the dropdown-menu if has
+          //     }
+          //   }
+
+          button.op-dropdown-menu-li-button {
+            @apply hover:bg-primary-500/20 rounded-lg;
+          }
+
+          button.op-dropdown-menu-li-button.selected {
+            @apply bg-primary-500 hover:bg-primary-500 font-semibold text-white;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,213 @@
+.op-btn-main.op-btn-main-ip-online {
+  // .op-btn-main-[YOUR STYLE SUFFIX]
+  //  main and very first element
+
+  .btn {
+    // button itself and just regular button shape
+    @apply isolate w-full rounded-none text-[1em];
+
+    .slot {
+      @apply text-[1em];
+      // parent of button content slot
+    }
+  }
+
+  // dynamic classes based on button style type
+  .btn-primary {
+    @apply bg-primary hover:bg-primary-700 text-white transition-all;
+    &:hover {
+      animation: text-glitch 1s linear infinite alternate-reverse;
+      .slot {
+        animation: text-glitch-pos 2s linear infinite;
+      }
+    }
+  }
+
+  .btn-primary-outline {
+    @apply border-primary-500 hover:bg-primary-500 text-white;
+    &:hover {
+      animation: text-glitch 1s linear infinite alternate-reverse;
+      .slot {
+        animation: text-glitch-pos 2s linear infinite;
+      }
+    }
+  }
+
+  .btn-primary-side {
+    // primary button style with side bg
+    @apply text-primary-500 hover:bg-primary-500/10;
+    &:hover {
+      animation: text-glitch 1s linear infinite alternate-reverse;
+      .slot {
+        animation: text-glitch-pos 2s linear infinite;
+      }
+    }
+  }
+
+  .btn-secondary {
+    // secondary button style with secondary bg
+    @apply bg-secondary-500 hover:bg-secondary-700 text-neutral-950;
+    &:hover {
+      animation: text-glitch 1s linear infinite alternate-reverse;
+      .slot {
+        animation: text-glitch-pos 2s linear infinite;
+      }
+    }
+  }
+
+  .btn-secondary-outline {
+    // secondary button style with outline
+    @apply border-secondary-500 hover:bg-secondary-500 hover:text-neutral-950;
+    &:hover {
+      animation: text-glitch 1s linear infinite alternate-reverse;
+      .slot {
+        animation: text-glitch-pos 2s linear infinite;
+      }
+    }
+  }
+
+  .btn-secondary-side {
+    // secondary button style with side bg
+    @apply text-secondary-500 hover:bg-secondary-500/10;
+    &:hover {
+      animation: text-glitch 1s linear infinite alternate-reverse;
+      .slot {
+        animation: text-glitch-pos 2s linear infinite;
+      }
+    }
+  }
+
+  .btn-ghost {
+    // ghost button style with ghost bg
+    &:hover {
+      animation: text-glitch 1s linear infinite alternate-reverse;
+      .slot {
+        animation: text-glitch-pos 2s linear infinite;
+      }
+    }
+  }
+
+  .btn-ghost-outline {
+    // ghost button style with outline
+    &:hover {
+      animation: text-glitch 1s linear infinite alternate-reverse;
+      .slot {
+        animation: text-glitch-pos 2s linear infinite;
+      }
+    }
+  }
+  .btn-ghost-side {
+    // ghost button style with side bg
+    &:hover {
+      animation: text-glitch 1s linear infinite alternate-reverse;
+      .slot {
+        animation: text-glitch-pos 2s linear infinite;
+      }
+    }
+  }
+
+  // dynamic classes
+  // ===============
+
+  .loading {
+    // .loading class will be added once button is loading
+  }
+
+  .disabled {
+    // .disabled class will be added once input is disabled
+  }
+}
+
+.op-btn-main.op-btn-main-ip-online.danger {
+  .btn-ghost {
+    animation: none !important;
+    @apply text-red-400 hover:bg-red-400/20;
+  }
+}
+
+// E9436F
+// 09F7A0
+
+// @keyframes text-glitch {
+//   0% {
+//     text-shadow: none;
+//   }
+
+//   25% {
+//     text-shadow:
+//       -2px -2px 0 #e9436f,
+//       2px 2px 0 #09f7a0;
+//   }
+
+//   50% {
+//     text-shadow:
+//       2px -2px 0 #e9436f,
+//       -2px 2px 0 #09f7a0;
+//   }
+
+//   75% {
+//     text-shadow:
+//       -2px 2px 0 #e9436f,
+//       2px -2px 0 #09f7a0;
+//   }
+
+//   100% {
+//     text-shadow:
+//       2px 2px 0 #e9436f,
+//       -2px -2px 0 #09f7a0;
+//   }
+// }
+
+@keyframes text-glitch {
+  0%,
+  44% {
+    text-shadow: none;
+  }
+
+  45% {
+    text-shadow:
+      -2px -2px 0 #e9436f,
+      2px 2px 0 #09f7a0;
+  }
+
+  50%,
+  90% {
+    text-shadow:
+      2px -2px 0 #e9436f,
+      -2px 2px 0 #09f7a0;
+  }
+
+  95% {
+    text-shadow:
+      -2px 2px 0 #e9436f,
+      2px -2px 0 #09f7a0;
+  }
+
+  100% {
+    text-shadow:
+      2px 2px 0 #e9436f,
+      -2px -2px 0 #09f7a0;
+  }
+}
+
+@keyframes text-glitch-pos {
+  0%,
+  10% {
+    transform: translateX(0);
+  }
+
+  11%,
+  12% {
+    transform: translateX(6px);
+  }
+
+  13%,
+  14% {
+    transform: translateX(6px);
+  }
+
+  15%,
+  100% {
+    transform: translateX(0);
+  }
+}
