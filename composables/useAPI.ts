@@ -41,7 +41,7 @@ export default async function useAPI<T extends Endpoint>(
     if (e.status) console.error('[API] Global Exception Handler:', e)
     const { toast } = useToastMessage()
     const { $i18n } = useNuxtApp()
-    const { t } = $i18n
+    const { t, locale } = $i18n
     toast(t('error.networkError'), 'ERROR')
   }
   function buildHeaders(overrides: Record<string, string | undefined> = {}) {
